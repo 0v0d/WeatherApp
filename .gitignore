@@ -1,0 +1,123 @@
+# Built application files
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Built files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle generated files
+.gradle/
+build/
+
+# Signing files
+signing/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Studio
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries
+.idea/vcs.xml
+*.ipr
+
+# User-specific files
+.gradle
+/captures
+
+# Emulator AVD files
+*.avd/
+*.hprof
+
+# ProGuard files
+proguard/
+
+# Crashlytics generated file
+com_crashlytics_export_strings.xml
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Google Services (e.g. API key file)
+google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# React Native
+node_modules/
+android/build/
+ios/Pods/
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# Intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Lint
+lint/
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Files created by Android Studio
+*.iml
+*.iws
+*.ipr
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude build generated files
+build/
+
+# Exclude UI Designer files
+*.9.png
+*.gif
+*.webp
+
+# Exclude lint files
+lint-results-*.html
+
+# AndroidX Navigation
+.navigation/
+
+# Room
+*.db
+*.db-shm
+*.db-wal
+
+# Hilt
+generated/

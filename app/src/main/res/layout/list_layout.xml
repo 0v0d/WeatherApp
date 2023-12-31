@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:padding="15dp"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:viewBindingIgnore="true">
+
+  <TextView
+    android:id="@+id/weatherDate"
+    style="@style/ListTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true" />
+
+  <TextView
+    android:id="@+id/weatherWeek"
+    style="@style/ListTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/weatherDate" />
+
+  <TextView
+    android:id="@+id/weatherTime"
+    style="@style/ListTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true" />
+
+  <TextView
+    android:id="@+id/weatherTemp"
+    style="@style/ListTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_toEndOf="@+id/weatherTime" />
+
+  <ImageView
+    android:id="@+id/weatherIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    app:tint="@color/white" />
+</RelativeLayout>

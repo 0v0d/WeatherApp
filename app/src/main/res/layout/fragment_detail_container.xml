@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/detailContainer"
+  style="@style/DetailLinerLayout"
+  android:background="@color/translucent"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:visibility="invisible">
+
+  <LinearLayout
+    style="@style/DetailLinerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <!-- Max Temperature -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_temp" />
+
+      <TextView
+        android:id="@+id/maxTemp"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Min Temperature -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min_temp" />
+
+      <TextView
+        android:id="@+id/minTemp"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    style="@style/DetailLinerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <!-- Sunrise -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise" />
+
+      <TextView
+        android:id="@+id/sunrise"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Sunset -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunset" />
+
+      <TextView
+        android:id="@+id/sunset"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    style="@style/DetailLinerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <!-- Wind -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wind" />
+
+      <TextView
+        android:id="@+id/wind"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Pressure -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pressure" />
+
+      <TextView
+        android:id="@+id/pressure"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    style="@style/DetailLinerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <!-- Humidity -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/humidity" />
+
+      <TextView
+        android:id="@+id/humidity"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Forecast Time -->
+    <LinearLayout
+      style="@style/DualPaneLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <TextView
+        style="@style/DetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forecast_time" />
+
+      <TextView
+        android:id="@+id/forecastTime"
+        style="@style/DetailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

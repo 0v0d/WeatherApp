@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/infoContainer"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/black">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+      android:id="@+id/cloudViewContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+    <FrameLayout
+      android:id="@+id/rainViewContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+
+  </RelativeLayout>
+
+  <ProgressBar
+    android:id="@+id/loader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true" />
+
+  <LinearLayout
+    android:id="@+id/mainContainer"
+    style="@style/MainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="35sp" />
+
+    <TextView
+      android:id="@+id/weather"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center|top"
+      android:textSize="30sp" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="1dp">
+
+      <Button
+        android:id="@+id/currentWeatherButton"
+        style="@style/CurrentWeatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+      <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="50sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+      android:id="@+id/detailContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+    <FrameLayout
+      android:id="@+id/weatherList"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  </LinearLayout>
+</RelativeLayout>

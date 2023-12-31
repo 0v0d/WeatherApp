@@ -1,0 +1,18 @@
+<resources>
+  <string name="app_name">WeatherApp</string>
+  <string name="pressure">Pressure</string>
+  <string name="humidity">Humidity</string>
+  <string name="wind">WindSpeed</string>
+  <string name="sunset">Sunset</string>
+  <string name="sunrise">Sunrise</string>
+  <string name="max_temp">MaxTemp</string>
+  <string name="min_temp">MinTemp</string>
+  <string name="forecast_time">Forecast time</string>
+  <string name="current_weather">Current</string>
+  <string name="retry">Retry</string>
+  <string name="query_hint">Please enter your region</string>
+  <string name="ui_error">Failed to update UI</string>
+  <string name="location_error">Regional search failed</string>
+  <string name="reload_error">Info reload failed</string>
+  <string name="text_error">Only alphabet characters are allowed</string>
+</resources>

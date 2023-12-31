@@ -1,0 +1,18 @@
+<resources>
+  <string name="app_name">WeatherApp</string>
+  <string name="pressure">気圧</string>
+  <string name="humidity">湿度</string>
+  <string name="wind">風速</string>
+  <string name="sunset">日の入</string>
+  <string name="sunrise">日の出</string>
+  <string name="max_temp">最高気温</string>
+  <string name="min_temp">最低気温</string>
+  <string name="forecast_time">予報時刻</string>
+  <string name="current_weather">現在の天気</string>
+  <string name="retry">リトライ</string>
+  <string name="query_hint">地域を入力してください</string>
+  <string name="ui_error">UIの更新に失敗しました</string>
+  <string name="location_error">地域検索に失敗しました</string>
+  <string name="reload_error">再取得に失敗しました</string>
+  <string name="text_error">アルファベットを使用してください</string>
+</resources>
