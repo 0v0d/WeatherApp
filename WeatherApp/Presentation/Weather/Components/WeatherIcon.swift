@@ -8,12 +8,12 @@ import SwiftUI
 struct WeatherIcon: View {
     let condition: WeatherCondition
     let size: CGFloat
-    
+
     init(condition: WeatherCondition, size: CGFloat = 80) {
         self.condition = condition
         self.size = size
     }
-    
+
     var body: some View {
         Image(systemName: condition.iconName)
             .font(.system(size: size))

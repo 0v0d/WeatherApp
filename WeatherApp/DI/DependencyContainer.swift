@@ -8,7 +8,7 @@ import Foundation
 
 struct WeatherRepositoryClient: Sendable {
     var fetchWeather: @Sendable (String) async throws -> Weather
-    
+
     static let live = WeatherRepositoryClient(
         fetchWeather: { city in
             let apiClient = WeatherAPIClient()
@@ -16,7 +16,7 @@ struct WeatherRepositoryClient: Sendable {
             return response.toWeather()
         }
     )
-    
+
     static let mock = WeatherRepositoryClient(
         fetchWeather: { city in
             try await Task.sleep(nanoseconds: 500_000_000)
@@ -30,7 +30,7 @@ struct WeatherRepositoryClient: Sendable {
 struct UserDefaultsClient: Sendable {
     var stringArray: @Sendable (String) -> [String]?
     var setStringArray: @Sendable ([String], String) -> Void
-    
+
     static let live = UserDefaultsClient(
         stringArray: { key in
             UserDefaults.standard.stringArray(forKey: key)

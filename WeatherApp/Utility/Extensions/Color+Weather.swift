@@ -24,7 +24,7 @@ extension Color {
             return [Color(hex: "87CEEB"), Color(hex: "1E90FF")]
         }
     }
-    
+
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0

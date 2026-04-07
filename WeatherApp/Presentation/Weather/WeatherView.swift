@@ -8,18 +8,18 @@ import SwiftUI
 struct WeatherView: View {
     @State private var viewModel = WeatherViewModel()
     @State private var showingSearch = false
-    
+
     var body: some View {
         ZStack {
             WeatherBackground(condition: viewModel.weather?.condition ?? .clear)
-            
+
             VStack {
                 headerBar
-                
+
                 Spacer()
-                
+
                 contentView
-                
+
                 Spacer()
             }
             .padding()
@@ -38,11 +38,11 @@ struct WeatherView: View {
             }
         }
     }
-    
+
     private var headerBar: some View {
         HStack {
             Spacer()
-            
+
             Button {
                 showingSearch = true
             } label: {
@@ -53,7 +53,7 @@ struct WeatherView: View {
         }
         .padding(.horizontal)
     }
-    
+
     @ViewBuilder
     private var contentView: some View {
         if viewModel.isLoading {

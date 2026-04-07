@@ -7,7 +7,7 @@ import SwiftUI
 
 struct WeatherBackground: View {
     let condition: WeatherCondition
-    
+
     var body: some View {
         LinearGradient(
             colors: Color.weatherGradient(for: condition),

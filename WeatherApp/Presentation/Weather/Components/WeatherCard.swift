@@ -7,7 +7,7 @@ import SwiftUI
 
 struct WeatherCard: View {
     let weather: Weather
-    
+
     var body: some View {
         VStack(spacing: 20) {
             cityHeader
@@ -17,7 +17,7 @@ struct WeatherCard: View {
         .padding(24)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 24))
     }
-    
+
     private var cityHeader: some View {
         VStack(spacing: 4) {
             Text(weather.cityName)
@@ -28,11 +28,11 @@ struct WeatherCard: View {
                 .foregroundStyle(.secondary)
         }
     }
-    
+
     private var temperatureSection: some View {
         HStack(spacing: 20) {
             WeatherIcon(condition: weather.condition, size: 60)
-            
+
             VStack(alignment: .leading) {
                 Text(weather.temperatureCelsius)
                     .font(.system(size: 64, weight: .thin))
@@ -42,7 +42,7 @@ struct WeatherCard: View {
             }
         }
     }
-    
+
     private var detailsGrid: some View {
         HStack(spacing: 30) {
             WeatherDetailItem(
@@ -50,7 +50,7 @@ struct WeatherCard: View {
                 value: weather.humidityPercent,
                 label: "Humidity"
             )
-            
+
             WeatherDetailItem(
                 icon: "wind",
                 value: weather.windSpeedFormatted,
@@ -64,7 +64,7 @@ struct WeatherDetailItem: View {
     let icon: String
     let value: String
     let label: String
-    
+
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: icon)

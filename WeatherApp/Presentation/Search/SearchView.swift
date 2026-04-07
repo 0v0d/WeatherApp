@@ -8,13 +8,13 @@ import SwiftUI
 struct SearchView: View {
     @State private var viewModel = SearchViewModel()
     @Environment(\.dismiss) private var dismiss
-    
+
     let onCitySelected: (String) -> Void
-    
+
     init(onCitySelected: @escaping (String) -> Void) {
         self.onCitySelected = onCitySelected
     }
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -32,7 +32,7 @@ struct SearchView: View {
             }
         }
     }
-    
+
     private var searchSection: some View {
         Section {
             HStack {
@@ -42,7 +42,7 @@ struct SearchView: View {
                     .onSubmit {
                         submitSearch()
                     }
-                
+
                 if !viewModel.searchText.isEmpty {
                     Button {
                         viewModel.searchText = ""
@@ -53,7 +53,7 @@ struct SearchView: View {
                     .buttonStyle(.plain)
                 }
             }
-            
+
             Button {
                 submitSearch()
             } label: {
@@ -65,7 +65,7 @@ struct SearchView: View {
             .disabled(viewModel.searchText.trimmingCharacters(in: .whitespaces).isEmpty)
         }
     }
-    
+
     @ViewBuilder
     private var historySection: some View {
         if !viewModel.searchHistory.isEmpty {
@@ -99,13 +99,13 @@ struct SearchView: View {
             }
         }
     }
-    
+
     private func submitSearch() {
         let city = viewModel.searchText.trimmingCharacters(in: .whitespaces)
         guard !city.isEmpty else { return }
         selectCity(city)
     }
-    
+
     private func selectCity(_ city: String) {
         viewModel.addToHistory(city)
         onCitySelected(city)

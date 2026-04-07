@@ -12,7 +12,7 @@ struct LoadingView: View {
                 .progressViewStyle(.circular)
                 .scaleEffect(1.5)
                 .tint(.white)
-            
+
             Text("Loading...")
                 .font(.subheadline)
                 .foregroundStyle(.white)

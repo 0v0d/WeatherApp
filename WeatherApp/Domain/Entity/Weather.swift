@@ -15,7 +15,7 @@ struct Weather: Identifiable, Equatable, Sendable {
     let condition: WeatherCondition
     let description: String
     let timestamp: Date
-    
+
     nonisolated init(
         id: UUID = UUID(),
         cityName: String,
@@ -37,19 +37,19 @@ struct Weather: Identifiable, Equatable, Sendable {
         self.description = description
         self.timestamp = timestamp
     }
-    
+
     var temperatureCelsius: String {
         String(format: "%.0f°", temperature)
     }
-    
+
     var feelsLikeCelsius: String {
         String(format: "%.0f°", feelsLike)
     }
-    
+
     var humidityPercent: String {
         "\(humidity)%"
     }
-    
+
     var windSpeedFormatted: String {
         String(format: "%.1f m/s", windSpeed)
     }
@@ -66,7 +66,7 @@ enum WeatherCondition: String, CaseIterable, Sendable {
     case fog = "Fog"
     case haze = "Haze"
     case unknown = "Unknown"
-    
+
     var iconName: String {
         switch self {
         case .clear: return "sun.max.fill"
@@ -79,7 +79,7 @@ enum WeatherCondition: String, CaseIterable, Sendable {
         case .unknown: return "questionmark.circle.fill"
         }
     }
-    
+
     nonisolated init(from string: String) {
         self = WeatherCondition.allCases.first {
             $0.rawValue.lowercased() == string.lowercased()

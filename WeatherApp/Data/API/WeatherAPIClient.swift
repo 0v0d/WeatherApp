@@ -12,15 +12,17 @@ final class WeatherAPIClient: Sendable {
 
     nonisolated init() {
         guard let urlString = Bundle.main.infoDictionary?["BASE_URL"] as? String,
-        !urlString.isEmpty else {
+              !urlString.isEmpty
+        else {
             fatalError("BASE_URL が設定されていません")
         }
         guard let secret = Bundle.main.infoDictionary?["HMAC_SECRET"] as? String,
-              !secret.isEmpty else {
+              !secret.isEmpty
+        else {
             fatalError("HMAC_SECRET が設定されていません")
         }
-        self.baseURL = urlString
-        self.hmacSecret = secret
+        baseURL = urlString
+        hmacSecret = secret
     }
 
     func fetchWeather(for city: String) async throws -> WeatherResponse {
@@ -71,7 +73,7 @@ final class WeatherAPIClient: Sendable {
         return [
             "X-Timestamp": timestamp,
             "X-Nonce": nonce,
-            "X-Signature": signature
+            "X-Signature": signature,
         ]
     }
 
@@ -84,5 +86,3 @@ final class WeatherAPIClient: Sendable {
         return signature.map { String(format: "%02x", $0) }.joined()
     }
 }
-
-
